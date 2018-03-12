@@ -1,6 +1,12 @@
 <?php
 
-class Utils extends Security_Sniffs_Symfony2_Utils {
+namespace PHPCS_SecurityAudit\Sniffs\Drupal8;
+
+use PHPCS_SecurityAudit\Sniffs\Symfony2\Utils as BaseUtils;
+use PHP_CodeSniffer\Sniffs\Sniff;
+use PHP_CodeSniffer\Files\File;
+
+class Utils extends BaseUtils {
 
 	/**
 	* Heavy used function to verify if a token contains user input
