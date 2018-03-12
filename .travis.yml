@@ -15,6 +15,15 @@ before_script:
   # We don't have a composer.lock file because we always want to test with
   # latest dependencies.
   - composer install
+  - composer require codeclimate/php-test-reporter --dev
+
+addons:
+  code_climate:
+    repo_token:
+      secure: "xNWEWTb5mIkievarbi3Af3jpU/n1chHXfl77vBZPSJ2yhHWDaPaNhPoNHddsrhXt18Rs8DxlzFa7UMh+oGXy9mdVdoMgtfBLQyAjQKYyTPaxQ8O85bKIM42XzxUJIp01SK0WJnp2YSd7AbaxyIg3uGnAQDdZEYsvzt0LEhx2k8SJ4Skhpc+UnZrgwOsr3l3mtzd/DjNs8qCc/yIHey6cTibF/HX4PXbrrwc0BYhkBz5gT426jlT38bPiYS4pcPQtQzP1TU1lvYwcuaoxYiSCBzu5shA8rvnmYvLqT4DCWMlEflemCeNTjHiW4eltoWBwZxjtfEmnrnUQzwwcQ/voDhIm7Qk5WBWIOJfpFssyevhHjjT9EWeC2q3wV2oFC2rno1bi99eeOWloLMdmqIEVuS1EmYWC9A6H8NbTOl9MglpgOHn0KybDet/4gufECVutRPwrcaxQmGKlA9ZodCAjRYFAWG2+Ge0LovpgciAiFSACeEtTWUy2YnN36z71OdXDNpVvSP3MlXTOhDGYPohtFC/jeFxx8BsjoqYg0hIWyohSdYINTwhab68PE7HnAH4Ck5Bj+zTLL01tNIZmv8cCi9yvObldJW1P5KM5C8dQ3HRBq+jWRvZktMCanlypLI1+6GEyqJ4auHMsTeeFR+WxegZTbEfn1r99CVC9d3nkZK0="
 
 script:
   - vendor/bin/phpunit --coverage-text --colors=never
+
+after_script:
+  - vendor/bin/test-reporter
