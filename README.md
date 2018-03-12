@@ -1,6 +1,8 @@
 phpcs-security-audit v2
 =======================
 
+[![Build Status](https://travis-ci.org/Pierre-Loup/phpcs-security-audit.svg?branch=master)](https://travis-ci.org/Pierre-Loup/phpcs-security-audit)
+
 About
 -----
 phpcs-security-audit is a set of [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) rules that finds vulnerabilities and weaknesses related to security in PHP code.
