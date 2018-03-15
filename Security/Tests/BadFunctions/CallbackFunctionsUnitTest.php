@@ -24,7 +24,7 @@ class CallbackFunctionsUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         $errors = [
-            6 => 1
+            4 => 1
         ];
 
         return $errors;
@@ -43,7 +43,7 @@ class CallbackFunctionsUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         $warnings = [
-            5 => 1
+            3 => 1
         ];
 
         return $warnings;
