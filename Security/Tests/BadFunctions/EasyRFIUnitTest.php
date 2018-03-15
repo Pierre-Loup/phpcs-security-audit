@@ -1,6 +1,6 @@
 <?php
 /**
- * Unit test class for the CryptoFunctions sniff.
+ * Unit test class for the EasyRFI sniff.
  *
  * @license   https://github.com/FloeDesignTechnologies/phpcs-security-audit/blob/master/LICENSE GPLv3 
  */
@@ -9,7 +9,7 @@ namespace PHPCS_SecurityAudit\Tests\BadFunctions;
 
 use PHPCS_SecurityAudit\Tests\AbstractSniffUnitTest;
 
-class CryptoFunctionsUnitTest extends AbstractSniffUnitTest
+class EasyRFIUnitTest extends AbstractSniffUnitTest
 {
 
     /**
@@ -22,7 +22,8 @@ class CryptoFunctionsUnitTest extends AbstractSniffUnitTest
      */
     public function setCliValues($testFile, $config)
     {
-        if ($testFile === 'CryptoFunctionsUnitTest.1.inc') {
+        
+        if ($testFile === 'EasyRFIUnitTest.1.inc') {
             \PHP_CodeSniffer\Config::setConfigData('ParanoiaMode', 0);
         } else {
             \PHP_CodeSniffer\Config::setConfigData('ParanoiaMode', 1);
@@ -38,13 +39,24 @@ class CryptoFunctionsUnitTest extends AbstractSniffUnitTest
      *
      * @return array<int, int>
      */
-    public function getErrorList()
+    public function getErrorList($testFile="EasyRFIUnitTest.1.inc")
     {
-        $errors = [
+        switch ($testFile) {
+        case 'EasyRFIUnitTest.1.inc':
+            return [
                 5 => 1
             ];
-        
-        return $errors;
+            break;
+        case 'EasyRFIUnitTest.2.inc':
+            return [
+                5 => 1,
+                6 => 1
+            ];
+            break;
+        default:
+            return [];
+            break;
+        }
 
     }//end getErrorList()
 
@@ -57,18 +69,15 @@ class CryptoFunctionsUnitTest extends AbstractSniffUnitTest
      *
      * @return array<int, int>
      */
-    public function getWarningList($testFile="CryptoFunctionsUnitTest.1.inc")
+    public function getWarningList($testFile="EasyRFIUnitTest.1.inc")
     {
         switch ($testFile) {
-        case 'CryptoFunctionsUnitTest.1.inc':
-            return [
-                4 => 1
-            ];
+        case 'EasyRFIUnitTest.1.inc':
+            return [];
             break;
-        case 'CryptoFunctionsUnitTest.2.inc':
+        case 'EasyRFIUnitTest.2.inc':
             return [
-                3 => 1,
-                4 => 1
+                3 => 1
             ];
             break;
         default:
