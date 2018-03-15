@@ -11,8 +11,8 @@
     <blacklist>
       <directory>./vendor</directory>
     </blacklist>
-    <whitelist addUncoveredFilesFromWhitelist="true">
-      <directory suffix=".php">Security/</directory>
+    <whitelist>
+      <directory suffix=".php">Security/*</directory>
       <exclude>
         <directory suffix=".php">Security/Tests</directory>
       </exclude>

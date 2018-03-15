@@ -9,7 +9,7 @@ namespace PHPCS_SecurityAudit\Tests\BadFunctions;
 
 use PHPCS_SecurityAudit\Tests\AbstractSniffUnitTest;
 
-class CallbackFunctionsTest extends AbstractSniffUnitTest
+class CallbackFunctionsUnitTest extends AbstractSniffUnitTest
 {
 
 
@@ -24,7 +24,7 @@ class CallbackFunctionsTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         $errors = [
-            4 => 1
+            6 => 1
         ];
 
         return $errors;
@@ -43,7 +43,7 @@ class CallbackFunctionsTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         $warnings = [
-            3 => 1
+            5 => 1
         ];
 
         return $warnings;
