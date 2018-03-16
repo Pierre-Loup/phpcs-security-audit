@@ -1,6 +1,6 @@
 <?php
 /**
- * Unit test class for the FringeFunctions sniff.
+ * Unit test class for the FunctionHandlingFunctions sniff.
  *
  * @license   https://github.com/FloeDesignTechnologies/phpcs-security-audit/blob/master/LICENSE GPLv3 
  */
@@ -9,7 +9,7 @@ namespace PHPCS_SecurityAudit\Tests\BadFunctions;
 
 use PHPCS_SecurityAudit\Tests\AbstractSniffUnitTest;
 
-class FringeFunctionsUnitTest extends AbstractSniffUnitTest
+class FunctionHandlingFunctionsUnitTest extends AbstractSniffUnitTest
 {
 
     /**
@@ -23,7 +23,7 @@ class FringeFunctionsUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {  
         return [
-            4 => 1
+            3 => 1
         ];
 
     }//end getErrorList()
@@ -40,8 +40,7 @@ class FringeFunctionsUnitTest extends AbstractSniffUnitTest
     public function getWarningList()
     {
         return [
-            3 => 1,
-            5 => 1
+            4 => 1
         ];
         
     }//end getWarningList()
