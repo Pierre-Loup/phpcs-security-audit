@@ -2,6 +2,9 @@ phpcs-security-audit v2
 =======================
 
 [![Build Status](https://travis-ci.org/Pierre-Loup/phpcs-security-audit.svg?branch=master)](https://travis-ci.org/Pierre-Loup/phpcs-security-audit)
+[![Maintainability](https://api.codeclimate.com/v1/badges/86572cdf9a9b5593873b/maintainability)](https://codeclimate.com/github/Pierre-Loup/phpcs-security-audit/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/86572cdf9a9b5593873b/test_coverage)](https://codeclimate.com/github/Pierre-Loup/phpcs-security-audit/test_coverage)
+
 
 About
 -----
