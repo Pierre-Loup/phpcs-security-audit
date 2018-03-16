@@ -47,7 +47,6 @@ class EasyXSSUnitTest extends AbstractSniffUnitTest
             6 => 1,
             9 => 1,
             10 => 1,
-            12 => 1,
             13 => 1
         ];
         
@@ -78,7 +77,6 @@ class EasyXSSUnitTest extends AbstractSniffUnitTest
                 9 => 1,
                 10 => 1,
                 11 => 1,
-                12 => 1,
                 13 => 1
             ];
             break;

@@ -9,5 +9,5 @@ print "${_GET['a']}";
 echo a($_GET['b']);
 echo (allo(a($_GET['c'])));
 echo arg(1);
-die( "" . $_GET['a'] );
+die( htmlspecialchars("" . $_GET['a']) );
 exit("exit" . $_GET['a']);
