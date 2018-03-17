@@ -9,6 +9,8 @@ php:
   - 7.0
   - 7.1
   - 7.2
+exclude_patterns:
+- "Tests/"
 
 before_script:
   # We don't have a composer.lock file because we always want to test with
