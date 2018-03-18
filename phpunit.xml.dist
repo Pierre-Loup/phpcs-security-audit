@@ -12,10 +12,7 @@
       <directory>./vendor</directory>
     </blacklist>
     <whitelist>
-      <directory suffix=".php">Security/*</directory>
-      <exclude>
-        <directory suffix=".php">Security/Tests</directory>
-      </exclude>
+      <directory suffix=".php">Security/Sniffs</directory>
     </whitelist>
   </filter>
   <logging>
