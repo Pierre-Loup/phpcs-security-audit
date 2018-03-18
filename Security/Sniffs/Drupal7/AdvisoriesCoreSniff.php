@@ -26,8 +26,6 @@ class AdvisoriesCoreSniff implements Sniff {
 	* @return void
 	*/
 	public function process(File $phpcsFile, $stackPtr) {
-		if ($stackPtr > 0)
-			return;
 		$fileName  = $phpcsFile->getFileName();
 		if (!preg_match('/includes\/bootstrap\.inc$/', $fileName))
 			return;

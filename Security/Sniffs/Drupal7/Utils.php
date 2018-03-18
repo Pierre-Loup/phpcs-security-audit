@@ -404,10 +404,7 @@ class Utils extends BaseUtils {
 		),
 		16 => array(
 			array('DRUPAL-SA-CORE-2012-003', 'CVE-2012-4553 CVE-2012-4554'),
-		),
-		99 => array(
-			array('DRUPAL-SA-CORE-FAKE-000', 'NO CVE'),
-		),
+		)
 	);
 
 
