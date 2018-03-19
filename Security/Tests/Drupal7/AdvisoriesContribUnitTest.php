@@ -20,7 +20,7 @@ class AdvisoriesContribUnitTest extends AbstractSniffUnitTest
     protected function setUp()
     {
         parent::setUp();
-        \PHP_CodeSniffer\Config::setConfigData('CmsFramework', 'Drupal7');
+        \PHP_CodeSniffer\Config::setConfigData('CmsFramework', 'Drupal7', true);
         
     }//end setUp()
 

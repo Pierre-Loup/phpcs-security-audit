@@ -24,6 +24,9 @@ abstract class AbstractSniffUnitTest extends PHPCSAbstractSniffUnitTest
         $this->testsDir = __DIR__.'/';
         $this->standardsDir = __DIR__.'/../';
 
+        foreach (\PHP_CodeSniffer\Config::getAllConfigData() as $key => $value) {
+            \PHP_CodeSniffer\Config::setConfigData($key, null);
+        }
     }//end setUp()
     
 

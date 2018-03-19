@@ -23,9 +23,9 @@ class CryptoFunctionsUnitTest extends AbstractSniffUnitTest
     public function setCliValues($testFile, $config)
     {
         if ($testFile === 'CryptoFunctionsUnitTest.1.inc') {
-            \PHP_CodeSniffer\Config::setConfigData('ParanoiaMode', 0);
+            \PHP_CodeSniffer\Config::setConfigData('ParanoiaMode', 0, true);
         } else {
-            \PHP_CodeSniffer\Config::setConfigData('ParanoiaMode', 1);
+            \PHP_CodeSniffer\Config::setConfigData('ParanoiaMode', 1, true);
         }
 
     }//end setCliValues()

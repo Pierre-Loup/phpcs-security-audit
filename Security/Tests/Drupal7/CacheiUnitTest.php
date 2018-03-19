@@ -1,16 +1,28 @@
 <?php
 /**
- * Unit test class for the FilesystemFunctions sniff.
+ * Unit test class for the AdvisoriesContrib sniff.
  *
  * @license   https://github.com/FloeDesignTechnologies/phpcs-security-audit/blob/master/LICENSE GPLv3 
  */
 
-namespace PHPCS_SecurityAudit\Tests\BadFunctions;
+namespace PHPCS_SecurityAudit\Tests\Drupal7;
 
 use PHPCS_SecurityAudit\Tests\AbstractSniffUnitTest;
 
-class FilesystemFunctionsUnitTest extends AbstractSniffUnitTest
+class CacheiUnitTest extends AbstractSniffUnitTest
 {
+    
+    /**
+     * Sets up this unit test.
+     *
+     * @return void
+     */
+    protected function setUp()
+    {
+        parent::setUp();
+        \PHP_CodeSniffer\Config::setConfigData('CmsFramework', 'Drupal7', true);
+        
+    }//end setUp()
 
     /**
      * Get a list of CLI values to set before the file is tested.
@@ -22,15 +34,14 @@ class FilesystemFunctionsUnitTest extends AbstractSniffUnitTest
      */
     public function setCliValues($testFile, $config)
     {
-        
-        if ($testFile === 'FilesystemFunctionsUnitTest.1.inc') {
+        if ($testFile === 'CacheiUnitTest.1.inc') {
             \PHP_CodeSniffer\Config::setConfigData('ParanoiaMode', 0, true);
         } else {
             \PHP_CodeSniffer\Config::setConfigData('ParanoiaMode', 1, true);
         }
 
     }//end setCliValues()
-
+    
     /**
      * Returns the lines where errors should occur.
      *
@@ -39,13 +50,12 @@ class FilesystemFunctionsUnitTest extends AbstractSniffUnitTest
      *
      * @return array<int, int>
      */
-    public function getErrorList($testFile="FilesystemFunctionsUnitTest.1.inc")
-    {
-        $errors = [
-            5 => 1
+    public function getErrorList()
+    {  
+        return [
+            4 => 1,
+            6 => 1
         ];
-        
-        return $errors;
 
     }//end getErrorList()
 
@@ -58,11 +68,22 @@ class FilesystemFunctionsUnitTest extends AbstractSniffUnitTest
      *
      * @return array<int, int>
      */
-    public function getWarningList($testFile="FilesystemFunctionsUnitTest.1.inc")
+    public function getWarningList($testFile="CacheiUnitTest.1.inc")
     {
-        return [
-            4 => 2
-        ];
+        switch ($testFile) {
+        case 'CacheiUnitTest.1.inc':
+            return [];
+            break;
+        case 'CacheiUnitTest.2.inc':
+            return [
+                3 => 1,
+                5 => 1
+            ];
+            break;
+        default:
+            return [];
+            break;
+        }
 
     }//end getWarningList()
 
